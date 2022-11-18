@@ -1,0 +1,40 @@
+#bg{
+    background-image: url('/static/img/weather-bg4.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: none;
+    background-attachment: fixed;
+    padding: 60px;
+}
+
+#titleText{
+    font-family: 'Zefani';
+    font-size: 60px;
+    color: black;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#bodyBg{
+    background-image: url('/static/img/body-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: none;
+    background-attachment: fixed;
+    padding: 10;
+}
+
+#position1{
+    margin-left: 15%;
+}
+
+#position2{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@font-face {
+    font-family: 'Zefani';
+    src: url("/static/font/Zefani_Uppercase_Demo-Regular.otf");
+}
+

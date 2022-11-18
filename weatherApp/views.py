@@ -9,17 +9,36 @@ def index(request):
     # url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=API_KEY' -- we have to give the API_KEY
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=cf04bb1c1cbb56802202f29873defeb9'
 
-    city = 'Manama'
+    cityHome = 'Manama'
 
-    city_weather = requests.get(url.format(city)).json() #we are requesting the API data and converting the JSON to Python data types
-    print(city_weather) #checking the output
-    weather = {
-        'city' : city,
-        'temperature' : city_weather['main']['temp'],
-        'description' : city_weather['weather'][0]['description'],
-        'wind' : city_weather['wind']['speed'],
-        'icon' : city_weather['weather'][0]['icon']
+    cityHome_weather = requests.get(url.format(cityHome)).json() #we are requesting the API data and converting the JSON to Python data types
+    print(cityHome_weather)
+    weatherHome = {
+        'city' : cityHome,
+        'temperature' : cityHome_weather['main']['temp'],
+        'description' : cityHome_weather['weather'][0]['description'],
+        'wind' : cityHome_weather['wind']['speed'],
+        'icon' : cityHome_weather['weather'][0]['icon']
     }
-    return render(request, 'index.html', {'weather' : weather}) #returns the index.html template
+    return render(request, 'index.html', {'weatherHome' : weatherHome}) #returns the index.html template
+
+def index1(request1):
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=cf04bb1c1cbb56802202f29873defeb9'
+
+    cityAway = 'Pune'
+
+    cityAway_weather = requests.get(url.format(cityAway)).json() #we are requesting the API data and converting the JSON to Python data types
+    print(cityAway_weather)
+    weatherAway = {
+        'city' : cityAway,
+        'temperature' : cityAway_weather['main']['temp'],
+        'description' : cityAway_weather['weather'][0]['description'],
+        'wind' : cityAway_weather['wind']['speed'],
+        'icon' : cityAway_weather['weather'][0]['icon']
+    }
+    return render(request1, 'index.html', {'weatherAway' : weatherAway}) #returns the index.html template
+
+
+
 
     
