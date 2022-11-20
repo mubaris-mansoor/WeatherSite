@@ -27,21 +27,25 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-offset-4 is-4" id="position1">
-                    <div class="box">
+                <div class="column is-offset-4 is-4"  id = 'position1'>
+                    <div class="box" id = 'bodyBg'>
                         <article class="media">
-                            <div class="media-left">
+                            <div class="media-left" >
                                 <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                                    <img src="http://openweathermap.org/img/w/{{ weatherHome.icon }}.png" alt="Image">
                                 </figure>
                             </div>
-                            <div class="media-content" id = 'bodyBg'>
+                            <div class="media-content" >
                                 <div class="content">
                                     <p>
+                                        <span class="subtitle"> <b> Home Country : {{ weatherHome.country }} </b> </span>
+                                        <br> 
                                         <span class="title">{{ weatherHome.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ weatherHome.temperature }}° F</span>
-                                        <br> {{ weatherHome.description }}
+                                        <span class="subtitle">{{ weatherHome.temperature }}° C</span>
+                                        <br> 
+                                        <span class="subtitle">{{ weatherHome.description }}</span>
+                                        <br> 
                                     </p>
                                 </div>
                             </div>
@@ -49,20 +53,24 @@
                     </div>
                 </div>
                 <div class="column is-offset-4 is-4" id="position2">
-                    <div class="box">
+                    <div class="box" id = 'bodyBg'>
                         <article class="media">
                             <div class="media-left">
                                 <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                                    <img src="http://openweathermap.org/img/w/{{ weatherAway.icon }}.png" alt="Image">
                                 </figure>
                             </div>
-                            <div class="media-content" id = 'bodyBg'>
+                            <div class="media-content" >
                                 <div class="content">
                                     <p>
+                                        <span class="subtitle"> <b> Away Country : {{ weatherAway.country }} </b> </span>
+                                        <br> 
                                         <span class="title">{{ weatherAway.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ weatherAway.temperature }}° F</span>
-                                        <br> {{ weatherAway.description }}
+                                        <span class="subtitle">{{ weatherAway.temperature }}° C</span>
+                                        <br> 
+                                        <span class="subtitle">{{ weatherAway.description }}</span>
+                                        <br> 
                                     </p>
                                 </div>
                             </div>
